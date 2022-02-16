@@ -6,11 +6,11 @@ import "./App.css";
 
 const App = () => {
     if(!localStorage.getItem("username")) return <LoginForm />
-    console.log(process.env.REACT_APP_PROJECT_ID)
+
     return (
         <ChatEngine 
             height="100vh"
-            projectID={`${process.env.REACT_APP_PROJECT_ID}`}
+            projectID="f0adc111-bb05-4d92-9d38-a68c4fcba23b"
             userName={localStorage.getItem("username")}
             userSecret={localStorage.getItem("password")}
             renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps}/>}
