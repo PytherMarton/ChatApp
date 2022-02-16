@@ -6,7 +6,7 @@ import "./App.css";
 
 const App = () => {
     if(!localStorage.getItem("username")) return <LoginForm />
-    
+    console.log(process.env.REACT_APP_PROJECT_ID)
     return (
         <ChatEngine 
             height="100vh"
